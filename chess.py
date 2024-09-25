@@ -36,9 +36,7 @@ functionChess = {'пешка': isPawnMoveCorrect,
                  'королева': isQueenMoveCorrect,
                  'король': isKingMoveCorrect}
 
-ans = functionChess[chess_piece](*coord_start, *coord_final)
-
-if ans:
+if functionChess[chess_piece](*coord_start, *coord_final):
     print('корректный ход')
 else:
     print('некорректный ход')
